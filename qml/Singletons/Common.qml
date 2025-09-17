@@ -1,0 +1,10 @@
+pragma Singleton
+
+import QtQuick
+
+Item {
+    property color accentColor: "#42f584"
+    property color windowColor: "#e1fceb"
+    property color primaryColor: "#c2fcd8"
+    property bool isMobile: false
+}
