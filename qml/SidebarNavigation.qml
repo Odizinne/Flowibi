@@ -17,7 +17,7 @@ Drawer {
             text: "Menu"
             font.pixelSize: 24
             font.bold: true
-            color: Material.primary
+            color: Material.accent
             anchors.horizontalCenter: parent.horizontalCenter
             bottomPadding: 20
         }

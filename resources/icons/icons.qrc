@@ -6,5 +6,6 @@
         <file>message.svg</file>
         <file>cross.svg</file>
         <file>menu.svg</file>
+        <file>zaza.png</file>
     </qresource>
 </RCC>
