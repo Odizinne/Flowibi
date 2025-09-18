@@ -18,6 +18,7 @@ qt_add_executable(${CMAKE_PROJECT_NAME}
     src/main.cpp
     resources/icons/icons.qrc
     resources/images/images.qrc
+    resources/fonts/fonts.qrc
 )
 
 set(QML_FILES
