@@ -30,10 +30,10 @@ ApplicationWindow {
 
     function switchToPage(index) {
         switch (index) {
-            case 0: stackView.replace(accueilComponent); break
-            case 1: stackView.replace(galerieComponent); break
-            case 2: stackView.replace(contactComponent); break
-            case 3: stackView.replace(socialComponent); break
+        case 0: stackView.replace(accueilComponent); break
+        case 1: stackView.replace(galerieComponent); break
+        case 2: stackView.replace(contactComponent); break
+        case 3: stackView.replace(socialComponent); break
         }
         previousButtonIndex = selectedButtonIndex
     }
@@ -42,15 +42,15 @@ ApplicationWindow {
         switchToPage(selectedButtonIndex)
     }
 
+    BackgroundDots {
+        id: dotPattern
+        anchors.fill: parent
+        z: -1
+    }
+
     Component {
         id: accueilComponent
-        Item {
-            Label {
-                text: "Accueil"
-                anchors.centerIn: parent
-                font.pixelSize: 32
-            }
-        }
+        HomePane { }
     }
 
     Component {
@@ -60,24 +60,12 @@ ApplicationWindow {
 
     Component {
         id: contactComponent
-        Item {
-            Label {
-                text: "Contact"
-                anchors.centerIn: parent
-                font.pixelSize: 32
-            }
-        }
+        ContactPane { }
     }
 
     Component {
         id: socialComponent
-        Item {
-            Label {
-                text: "Social"
-                anchors.centerIn: parent
-                font.pixelSize: 32
-            }
-        }
+        SocialPane { }
     }
 
     header: ToolBar {
@@ -121,6 +109,7 @@ ApplicationWindow {
                 RoundButton {
                     id: accueilButton
                     text: "Accueil"
+                    icon.source: "qrc:/icons/home.svg"
                     flat: true
                     Layout.preferredWidth: root.headerButtonsWidth
                     onClicked: {
@@ -131,6 +120,7 @@ ApplicationWindow {
                 RoundButton {
                     id: galerieButton
                     text: "Galerie"
+                    icon.source: "qrc:/icons/gallery.svg"
                     flat: true
                     Layout.preferredWidth: root.headerButtonsWidth
                     onClicked: {
@@ -141,6 +131,7 @@ ApplicationWindow {
                 RoundButton {
                     id: contactButton
                     text: "Contact"
+                    icon.source: "qrc:/icons/message.svg"
                     flat: true
                     Layout.preferredWidth: root.headerButtonsWidth
                     onClicked: {
@@ -151,6 +142,7 @@ ApplicationWindow {
                 RoundButton {
                     id: socialButton
                     text: "Social"
+                    icon.source: "qrc:/icons/person.svg"
                     flat: true
                     Layout.preferredWidth: root.headerButtonsWidth
                     onClicked: {

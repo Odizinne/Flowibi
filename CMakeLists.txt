@@ -16,12 +16,15 @@ qt_standard_project_setup(REQUIRES 6.8)
 
 qt_add_executable(${CMAKE_PROJECT_NAME}
     src/main.cpp
+    resources/icons/icons.qrc
+    resources/images/images.qrc
 )
 
 set(QML_FILES
     qml/Main.qml
     qml/ImageCard.qml
     qml/GalleryPane.qml
+    qml/BackgroundDots.qml
 )
 
 set(QML_SINGLETONS
@@ -36,6 +39,9 @@ qt_add_qml_module(${CMAKE_PROJECT_NAME}
     URI Odizinne.${CMAKE_PROJECT_NAME}
     VERSION 1.0
     QML_FILES ${QML_FILES} ${QML_SINGLETONS}
+    QML_FILES qml/HomePane.qml
+    QML_FILES qml/ContactPane.qml
+    QML_FILES qml/SocialPane.qml
 )
 
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES

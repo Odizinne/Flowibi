@@ -13,11 +13,14 @@ Rectangle {
         elevation: 8
     }
     color: Common.primaryColor
-    radius: width * 0.04  // 8px when width is 200px
+    radius: width * 0.02  // 8px when width is 200px
     property string description: ""
     property string image: ""
+    readonly property int containerWidth: container.width
+    readonly property int containerHeight: container.height
 
     Rectangle {
+        id: container
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right

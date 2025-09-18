@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>home.svg</file>
+        <file>person.svg</file>
+        <file>gallery.svg</file>
+        <file>message.svg</file>
+        <file>cross.svg</file>
+    </qresource>
+</RCC>
