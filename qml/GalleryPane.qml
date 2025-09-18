@@ -80,6 +80,15 @@ Pane {
                             source: imgCard.model.cardImage
                             fillMode: Image.PreserveAspectCrop
                             visible: false
+                            asynchronous: true
+                            opacity: status === Image.Ready ? 1 : 0
+
+                            Behavior on opacity {
+                                NumberAnimation {
+                                    duration: 300
+                                    easing.type: Easing.OutQuad
+                                }
+                            }
                         }
 
                         Rectangle {
