@@ -25,6 +25,12 @@ set(QML_FILES
     qml/ImageCard.qml
     qml/GalleryPane.qml
     qml/BackgroundDots.qml
+    qml/HomePane.qml
+    qml/ContactPane.qml
+    qml/SocialPane.qml
+    qml/HeaderBar.qml
+    qml/CustomStackView.qml
+    qml/SidebarNavigation.qml
 )
 
 set(QML_SINGLETONS
@@ -39,12 +45,6 @@ qt_add_qml_module(${CMAKE_PROJECT_NAME}
     URI Odizinne.${CMAKE_PROJECT_NAME}
     VERSION 1.0
     QML_FILES ${QML_FILES} ${QML_SINGLETONS}
-    QML_FILES qml/HomePane.qml
-    QML_FILES qml/ContactPane.qml
-    QML_FILES qml/SocialPane.qml
-    QML_FILES qml/HeaderBar.qml
-    QML_FILES qml/CustomStackView.qml
-    QML_FILES qml/SidebarNavigation.qml
 )
 
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
