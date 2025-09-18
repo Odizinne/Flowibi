@@ -30,10 +30,10 @@ ToolBar {
             default: return "qrc:/icons/home.svg"
             }
         }
-        font.pixelSize: 14
         spacing: 6
-        icon.width: 24
-        icon.height: 24
+        font.pixelSize: 16
+        icon.width: 20
+        icon.height: 20
         anchors.centerIn: parent
         visible: Common.isMobile
     }
@@ -60,6 +60,9 @@ ToolBar {
                 text: "Accueil"
                 icon.source: "qrc:/icons/home.svg"
                 flat: true
+                font.pixelSize: 16
+                icon.width: 20
+                icon.height: 20
                 Layout.preferredWidth: root.headerButtonsWidth
                 onClicked: {
                     accentLine.animationEnabled = (Common.selectedButtonIndex !== 0)
@@ -71,6 +74,9 @@ ToolBar {
                 text: "Galerie"
                 icon.source: "qrc:/icons/gallery.svg"
                 flat: true
+                font.pixelSize: 16
+                icon.width: 20
+                icon.height: 20
                 Layout.preferredWidth: root.headerButtonsWidth
                 onClicked: {
                     accentLine.animationEnabled = (Common.selectedButtonIndex !== 1)
@@ -82,6 +88,9 @@ ToolBar {
                 text: "Contact"
                 icon.source: "qrc:/icons/message.svg"
                 flat: true
+                font.pixelSize: 16
+                icon.width: 20
+                icon.height: 20
                 Layout.preferredWidth: root.headerButtonsWidth
                 onClicked: {
                     accentLine.animationEnabled = (Common.selectedButtonIndex !== 2)
@@ -93,6 +102,9 @@ ToolBar {
                 text: "Social"
                 icon.source: "qrc:/icons/person.svg"
                 flat: true
+                font.pixelSize: 16
+                icon.width: 20
+                icon.height: 20
                 Layout.preferredWidth: root.headerButtonsWidth
                 onClicked: {
                     accentLine.animationEnabled = (Common.selectedButtonIndex !== 3)
