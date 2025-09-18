@@ -42,6 +42,9 @@ qt_add_qml_module(${CMAKE_PROJECT_NAME}
     QML_FILES qml/HomePane.qml
     QML_FILES qml/ContactPane.qml
     QML_FILES qml/SocialPane.qml
+    QML_FILES qml/HeaderBar.qml
+    QML_FILES qml/CustomStackView.qml
+    QML_FILES qml/SidebarNavigation.qml
 )
 
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES

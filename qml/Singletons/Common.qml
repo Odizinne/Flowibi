@@ -8,4 +8,6 @@ Item {
     property color primaryColor: "#c2fcd8"
     property color patternColor: "#b5ffd1"
     property bool isMobile: false
+    property int selectedButtonIndex: 0
+    property int previousButtonIndex: 0
 }
