@@ -3,6 +3,7 @@ import QtQuick.Controls.Material
 import QtQuick.Controls.impl
 import QtQuick
 import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 import Odizinne.Flowibi
 
 Pane {
@@ -67,14 +68,47 @@ Pane {
                         }
                     }
 
-                    Image {
-                        id: cardImage
+                    Item {
                         anchors.top: imgCard.top
                         anchors.left: imgCard.left
                         anchors.right: imgCard.right
                         height: imgCard.containerHeight
-                        source: imgCard.model.cardImage
-                        fillMode: Image.PreserveAspectCrop
+
+                        Image {
+                            id: cardImage
+                            anchors.fill: parent
+                            source: imgCard.model.cardImage
+                            fillMode: Image.PreserveAspectCrop
+                            visible: false
+                        }
+
+                        Rectangle {
+                            id: maskRectangle
+                            anchors.fill: parent
+                            color: "white"
+                            visible: false
+                            radius: imgCard.radius
+                            Rectangle {
+                                anchors.left: parent.left
+                                anchors.bottom: parent.bottom
+                                width: parent.radius
+                                height: parent.radius
+                                color: parent.color
+                            }
+                            Rectangle {
+                                anchors.right: parent.right
+                                anchors.bottom: parent.bottom
+                                width: parent.radius
+                                height: parent.radius
+                                color: parent.color
+                            }
+                        }
+
+                        OpacityMask {
+                            anchors.fill: cardImage
+                            source: cardImage
+                            maskSource: maskRectangle
+                        }
                     }
 
                     MouseArea {
